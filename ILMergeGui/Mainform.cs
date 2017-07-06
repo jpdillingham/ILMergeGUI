@@ -1187,7 +1187,7 @@ namespace ILMergeGui
 
             //! .Net v4.6 fixup.. 4.6 is an inplace upgrade of 4.0 which does not alter the version number.
             //! [workitem:8753]
-            if (Engine == Merger.ILMerge && framework.version.Major == 4 && (framework.version.Minor == 5 || framework.version.Minor == 6))
+            if (Engine == Merger.ILMerge && framework.version.Major == 4 && (framework.version.Minor == 5 || framework.version.Minor == 6 || framework.version.Minor == 7))
             {
                 frameversion = "4.0";
             }
