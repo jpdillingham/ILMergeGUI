@@ -913,7 +913,7 @@ namespace ILMergeGui
                         //! [workitem:8745]
                         //! .Net v4.6 fixup.
                         //! [workitem:8753]
-                        if (ver.Major == 4 && (ver.Minor == 5 || ver.Minor == 6))
+                        if (ver.Major == 4 && (ver.Minor >= 5))
                         {
                             versionKey = String.Format("4.{0}", ver.Minor);
                             versions.Add(new DotNet()
@@ -1187,7 +1187,7 @@ namespace ILMergeGui
 
             //! .Net v4.6 fixup.. 4.6 is an inplace upgrade of 4.0 which does not alter the version number.
             //! [workitem:8753]
-            if (Engine == Merger.ILMerge && framework.version.Major == 4 && (framework.version.Minor == 5 || framework.version.Minor == 6 || framework.version.Minor == 7 || framework.version.Minor == 8))
+            if (Engine == Merger.ILMerge && framework.version.Major == 4 && (framework.version.Minor >= 5))
             {
                 frameversion = "4.0";
             }
